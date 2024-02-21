@@ -5,7 +5,6 @@ const { createApp } = Vue
 createApp({
     data() {
         return {
-            arrayColori:["green","pink","yellow","black","blue","orange","red","violet","white","gray"],
             singolaMail: "",
             mailArray:[]
             
