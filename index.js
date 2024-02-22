@@ -15,14 +15,17 @@ createApp({
     mounted() {
         
 
-        axios.get('https://flynn.boolean.careers/exercises/api/random/mail').then((resultato) => {
+       // axios.get('https://flynn.boolean.careers/exercises/api/random/mail').then((resultato) => {
           
-            this.singolaMail = resultato.data.response
+            //this.singolaMail = resultato.data.response
             
             for(let i=0; i<10;i++){
-                this.mailArray.push(this.singolaMail)
+                axios.get('https://flynn.boolean.careers/exercises/api/random/mail').then((resultato) => {
+          
+                this.singolaMail = resultato.data.response
+                this.mailArray.push(this.singolaMail) })
             }
            
-        });
+    
     }
 }).mount('#app');
